@@ -3,14 +3,16 @@ import CardList from './CardList';
 import SearchBox from './SearchBox';
 import { robots } from './robots';
 
-const App = () => {
-  return (
-    <div>
-      <h1>Robofriends</h1>
-      <SearchBox />
-      <CardList robots={robots}/>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Robofriends</h1>
+        <SearchBox />
+        <CardList robots={robots}/>
+      </div>
+    );
+  }
 }
 
 export default App;
