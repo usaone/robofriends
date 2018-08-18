@@ -24,10 +24,11 @@ class App extends React.Component {
   }
 
   render() {
-    const filteredRobots = this.state.robots.filter(robotItem => {
-      return robotItem.name.toLowerCase().includes(this.state.searchField.toLowerCase());
+    const { robots, searchField } = this.state; //Destructuring
+    const filteredRobots = robots.filter(robotItem => {
+      return robotItem.name.toLowerCase().includes(searchField.toLowerCase());
     });
-    if (this.state.robots.length === 0) {
+    if (robots.length === 0) {
       return (<h1>Loading</h1>);
     } else {
       return (
